@@ -1,0 +1,12 @@
+SLStudio.Utils.RemoveHighlighting(get_param('radarSim4', 'handle'));
+SLStudio.Utils.RemoveHighlighting(get_param('gm_radarSim4', 'handle'));
+annotate_port('gm_radarSim4/radar/Compare To Zero/Compare', 0, 1, '');
+annotate_port('radarSim4/radar/Compare To Zero/Compare', 0, 1, '');
+annotate_port('gm_radarSim4/radar/FreqMeasure/Maximum', 0, 1, '');
+annotate_port('radarSim4/radar/FreqMeasure/Maximum', 0, 1, '');
+annotate_port('gm_radarSim4/radar/FreqMeasure/Maximum', 0, 1, '');
+annotate_port('radarSim4/radar/FreqMeasure/Maximum', 0, 1, '');
+annotate_port('gm_radarSim4/radar/FreqMeasure1/Maximum', 0, 1, '');
+annotate_port('radarSim4/radar/FreqMeasure1/Maximum', 0, 1, '');
+annotate_port('gm_radarSim4/radar/FreqMeasure1/Maximum', 0, 1, '');
+annotate_port('radarSim4/radar/FreqMeasure1/Maximum', 0, 1, '');

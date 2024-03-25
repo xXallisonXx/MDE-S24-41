@@ -1,0 +1,1 @@
+hdlsetuptoolpath('ToolName','Xilinx Vivado','ToolPath','D:\Vivado\2023.1\bin');

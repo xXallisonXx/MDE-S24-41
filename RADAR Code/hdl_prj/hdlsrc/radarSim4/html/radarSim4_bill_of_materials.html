@@ -1,0 +1,1085 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="rtwreport.css" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>
+High-level Resource Utilization Report for radarSim4
+</title>
+
+</head>
+<body bgcolor="#ffffff" link="0033CC" vlink="#666666" onload="try {if (top) {if (top.rtwPageOnLoad) top.rtwPageOnLoad('rtwIdBillOfMaterials'); else local_onload();}} catch(err) {};hdlTableShrink(this, 'Multiply_1_1');hdlTableShrink(this, 'Adder_1_1');hdlTableShrink(this, 'Subtractor_1_1');hdlTableShrink(this, 'Register_1_1');hdlTableShrink(this, 'Register_1_2');hdlTableShrink(this, 'Register_1_3');hdlTableShrink(this, 'Register_1_4');hdlTableShrink(this, 'Multiplexer_1_1');hdlTableShrink(this, 'Multiplexer_1_2');hdlTableShrink(this, 'Multiplexer_1_3');hdlTableShrink(this, 'Multiplexer_1_4');hdlTableShrink(this, 'Multiplexer_1_5');hdlTableShrink(this, 'Multiplexer_1_6');hdlTableShrink(this, 'Multiplexer_1_7');hdlTableShrink(this, 'Input_Port');hdlTableShrink(this, 'Output_Port');hdlTableShrink(this, 'Multiplexer_2_1');hdlTableShrink(this, 'Multiply_3_1');hdlTableShrink(this, 'Multiply_3_2');hdlTableShrink(this, 'Adder_3_1');hdlTableShrink(this, 'Register_3_2');hdlTableShrink(this, 'Register_3_3');hdlTableShrink(this, 'Register_3_4');hdlTableShrink(this, 'Register_3_5');hdlTableShrink(this, 'Multiplexer_3_3');hdlTableShrink(this, 'Multiplexer_3_4');hdlTableShrink(this, 'Multiplexer_3_5');hdlTableShrink(this, 'Multiply_4_1');hdlTableShrink(this, 'Multiply_4_2');hdlTableShrink(this, 'Adder_4_1');hdlTableShrink(this, 'Register_4_2');hdlTableShrink(this, 'Register_4_3');hdlTableShrink(this, 'Register_4_4');hdlTableShrink(this, 'Register_4_5');hdlTableShrink(this, 'Multiplexer_4_3');hdlTableShrink(this, 'Multiplexer_4_4');hdlTableShrink(this, 'Multiplexer_4_5');">
+<script>
+<!--
+function hdlTableShrink(o,tagNameStr)
+{
+var temp = document.getElementsByName(tagNameStr);
+if (temp[0].style.display == "")
+{
+	temp[0].style.display = "none";
+	o.innerHTML = '<span style="font-family:monospace">[+]</span>';
+}
+else
+{
+	temp[0].style.display = "";
+	o.innerHTML = '<span style="font-family:monospace">[-]</span>';
+}
+}
+// -->
+</script>
+<script>
+<!--
+function hdlTableCollapseAll(o, numNtks, numComps)
+{
+	var id = "";
+	for (i = 1; i <= numNtks; i++)
+	{
+		for (j = 1; j <= numComps; j++)
+		{
+			id = "Multiply" + "_" + i + "_" + j;
+			var temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "Adder" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "Subtractor" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "Register" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "RAM" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "Multiplexer" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+		}
+	}
+	var collapsibles = document.getElementsByName('collapsible');
+	for (i = 0; i < collapsibles.length; i++)
+	{
+		collapsibles[i].innerHTML = '<span style="font-family:monospace">[+]</span>';
+	}
+}
+// -->
+</script>
+<script>
+<!--
+function hdlTableExpandAll(o, numNtks, numComps)
+{
+	var id = "";
+	for (i = 1; i <= numNtks; i++)
+	{
+		for (j = 1; j <= numComps; j++)
+		{
+			id = "Multiply" + "_" + i + "_" + j;
+			var temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "Adder" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "Subtractor" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "Register" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "RAM" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "Multiplexer" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+		}
+	}
+	var collapsibles = document.getElementsByName('collapsible');
+	for (i = 0; i < collapsibles.length; i++)
+	{
+		collapsibles[i].innerHTML = '<span style="font-family:monospace">[-]</span>';
+	}
+}
+// -->
+</script>
+<font SIZE="+2" COLOR="#000066">
+Generic Resource Report for radarSim4
+</font>
+<br /><br /><br /><a name="Summary">
+<font size="+1" color="#000066">
+<b class="midprod">
+Summary
+</b>
+
+</font>
+
+</a>
+<br /><br /><table width="100%" border="1">
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+Multipliers
+</td>
+<td align="center" valign="top" style="border-style: none">
+515
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+Adders/Subtractors
+</td>
+<td align="center" valign="top" style="border-style: none">
+258
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+Registers
+</td>
+<td align="center" valign="top" style="border-style: none">
+1140
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+Total 1-Bit Registers
+</td>
+<td align="center" valign="top" style="border-style: none">
+48096
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+RAMs
+</td>
+<td align="center" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+Multiplexers
+</td>
+<td align="center" valign="top" style="border-style: none">
+528
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+I/O Bits
+</td>
+<td align="center" valign="top" style="border-style: none">
+3212
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+Static Shift operators
+</td>
+<td align="center" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+Dynamic Shift operators
+</td>
+<td align="center" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+
+</table>
+<br /><br /><a name="Detailed Report">
+<font size="+1" color="#000066">
+<b class="midprod">
+Detailed Report
+</b>
+
+</font>
+
+</a>
+<br /><br /><p><hr /></p><h5>
+Report for Subsystem:    <a href="matlab:coder.internal.code2model('radarSim4:114')" name="code2model" class="code2model">
+radar
+</a>
+
+</h5>
+<h5>
+Multipliers (1)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiply_1_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+24x16-bit Multiply 							: 1
+</span>
+<span name="Multiply_1_1" id="Multiply_1_1">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:89')" name="code2model" class="code2model">
+Product
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><h5>
+Adders/Subtractors (2)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Adder_1_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+24x24-bit Adder 							: 1
+</span>
+<span name="Adder_1_1" id="Adder_1_1">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:217')" name="code2model" class="code2model">
+Add
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Subtractor_1_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+57x57-bit Subtractor 							: 1
+</span>
+<span name="Subtractor_1_1" id="Subtractor_1_1">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:86')" name="code2model" class="code2model">
+Subtract
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><h5>
+Registers (108)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_1_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+1-bit Register 							: 104
+</span>
+<span name="Register_1_1" id="Register_1_1">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('gm_radarSim4:96')" name="code2model" class="code2model">
+delayMatch
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_1_2')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+24-bit Register 							: 2
+</span>
+<span name="Register_1_2" id="Register_1_2">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('gm_radarSim4:94')" name="code2model" class="code2model">
+Merge_delay
+</a>
+
+</li>
+<li>
+<a href="matlab:coder.internal.code2model('gm_radarSim4:98')" name="code2model" class="code2model">
+HwModeRegister
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_1_3')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+16-bit Register 							: 1
+</span>
+<span name="Register_1_3" id="Register_1_3">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('gm_radarSim4:99')" name="code2model" class="code2model">
+HwModeRegister1
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_1_4')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+40-bit Register 							: 1
+</span>
+<span name="Register_1_4" id="Register_1_4">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('gm_radarSim4:97')" name="code2model" class="code2model">
+PipelineRegister
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><h5>
+Multiplexers (11)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiplexer_1_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+24-bit 2-to-1 Multiplexer 							: 3
+</span>
+<span name="Multiplexer_1_1" id="Multiplexer_1_1">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('gm_radarSim4:95')" name="code2model" class="code2model">
+Merge_delay_enbsw
+</a>
+
+</li>
+<li>
+<a href="matlab:coder.internal.code2model('gm_radarSim4:92')" name="code2model" class="code2model">
+Merge_switch_2
+</a>
+
+</li>
+<li>
+<a href="matlab:coder.internal.code2model('gm_radarSim4:93')" name="code2model" class="code2model">
+Merge_switch_1
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiplexer_1_2')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+25-bit 5-to-1 Multiplexer 							: 1
+</span>
+<span name="Multiplexer_1_2" id="Multiplexer_1_2">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:87')" name="code2model" class="code2model">
+Divide
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiplexer_1_3')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+26-bit 2-to-1 Multiplexer 							: 2
+</span>
+<span name="Multiplexer_1_3" id="Multiplexer_1_3">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:87')" name="code2model" class="code2model">
+Divide
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiplexer_1_4')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+24-bit 3-to-1 Multiplexer 							: 1
+</span>
+<span name="Multiplexer_1_4" id="Multiplexer_1_4">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:87')" name="code2model" class="code2model">
+Divide
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiplexer_1_5')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+41-bit 5-to-1 Multiplexer 							: 1
+</span>
+<span name="Multiplexer_1_5" id="Multiplexer_1_5">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:118')" name="code2model" class="code2model">
+Divide1
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiplexer_1_6')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+42-bit 2-to-1 Multiplexer 							: 2
+</span>
+<span name="Multiplexer_1_6" id="Multiplexer_1_6">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:118')" name="code2model" class="code2model">
+Divide1
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiplexer_1_7')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+40-bit 3-to-1 Multiplexer 							: 1
+</span>
+<span name="Multiplexer_1_7" id="Multiplexer_1_7">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:118')" name="code2model" class="code2model">
+Divide1
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><h5>
+Number of I/O Bits (3212)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Input_Port')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+Number of Input Bits: 3171
+</span>
+<span name="Input_Port" id="Input_Port">
+<ul>
+<li>
+clk: 1 bit
+</li>
+<li>
+reset: 1 bit
+</li>
+<li>
+clk_enable: 1 bit
+</li>
+<li>
+In1_re: 24 bits
+</li>
+<li>
+In1_im: 24 bits
+</li>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:236')" name="code2model" class="code2model">
+Input
+</a>
+: 3072 bits
+</li>
+<li>
+Input1_re: 24 bits
+</li>
+<li>
+Input1_im: 24 bits
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Output_Port')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+Number of Output Bits: 41
+</span>
+<span name="Output_Port" id="Output_Port">
+<ul>
+<li>
+ce_out: 1 bit
+</li>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:117')" name="code2model" class="code2model">
+dist
+</a>
+: 40 bits
+</li>
+
+</ul>
+
+</span>
+<br /><p><hr /></p><h5>
+Report for Multiply-instantiated Identical Subsystems  2 :   <a href="matlab:coder.internal.code2model('radarSim4:230')" name="code2model" class="code2model">
+If Action
+Subsystem1
+</a>
+, <a href="matlab:coder.internal.code2model('radarSim4:222')" name="code2model" class="code2model">
+If Action
+Subsystem
+</a>
+
+</h5>
+<h5>
+Registers (2)
+</h5>
+<span style="font-family:monospace">
+24-bit Register 							: 2
+</span>
+<br /><h5>
+Multiplexers (2)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiplexer_2_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+24-bit 2-to-1 Multiplexer 							: 2
+</span>
+<span name="Multiplexer_2_1" id="Multiplexer_2_1">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('gm_radarSim4:73')" name="code2model" class="code2model">
+In1bypassMux
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><p><hr /></p><h5>
+Report for Subsystem:    <a href="matlab:coder.internal.code2model('radarSim4:376')" name="code2model" class="code2model">
+FreqMeasure1
+</a>
+
+</h5>
+<h5>
+Multipliers (257)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiply_3_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+31x31-bit Multiply 							: 256
+</span>
+<span name="Multiply_3_1" id="Multiply_3_1">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:385')" name="code2model" class="code2model">
+Product
+</a>
+
+</li>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:386')" name="code2model" class="code2model">
+Product1
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiply_3_2')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+33x24-bit Multiply 							: 1
+</span>
+<span name="Multiply_3_2" id="Multiply_3_2">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:387')" name="code2model" class="code2model">
+Product2
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><h5>
+Adders/Subtractors (128)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Adder_3_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+63x63-bit Adder 							: 128
+</span>
+<span name="Adder_3_1" id="Adder_3_1">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:379')" name="code2model" class="code2model">
+Add
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><h5>
+Registers (515)
+</h5>
+<span style="font-family:monospace">
+31-bit Register 							: 256
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_3_2')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+62-bit Register 							: 256
+</span>
+<span name="Register_3_2" id="Register_3_2">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('gm_radarSim4:60')" name="code2model" class="code2model">
+PipelineRegister
+</a>
+
+</li>
+<li>
+<a href="matlab:coder.internal.code2model('gm_radarSim4:63')" name="code2model" class="code2model">
+PipelineRegister1
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_3_3')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+32-bit Register 							: 1
+</span>
+<span name="Register_3_3" id="Register_3_3">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('gm_radarSim4:67')" name="code2model" class="code2model">
+HwModeRegister4
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_3_4')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+24-bit Register 							: 1
+</span>
+<span name="Register_3_4" id="Register_3_4">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('gm_radarSim4:68')" name="code2model" class="code2model">
+HwModeRegister5
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_3_5')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+56-bit Register 							: 1
+</span>
+<span name="Register_3_5" id="Register_3_5">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('gm_radarSim4:66')" name="code2model" class="code2model">
+PipelineRegister2
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><h5>
+Multiplexers (257)
+</h5>
+<span style="font-family:monospace">
+63-bit 2-to-1 Multiplexer 							: 127
+</span>
+<br /><span style="font-family:monospace">
+32-bit 2-to-1 Multiplexer 							: 127
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiplexer_3_3')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+57-bit 3-to-1 Multiplexer 							: 1
+</span>
+<span name="Multiplexer_3_3" id="Multiplexer_3_3">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:383')" name="code2model" class="code2model">
+Divide
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiplexer_3_4')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+57-bit 2-to-1 Multiplexer 							: 1
+</span>
+<span name="Multiplexer_3_4" id="Multiplexer_3_4">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:383')" name="code2model" class="code2model">
+Divide
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiplexer_3_5')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+56-bit 3-to-1 Multiplexer 							: 1
+</span>
+<span name="Multiplexer_3_5" id="Multiplexer_3_5">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:383')" name="code2model" class="code2model">
+Divide
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><p><hr /></p><h5>
+Report for Subsystem:    <a href="matlab:coder.internal.code2model('radarSim4:62')" name="code2model" class="code2model">
+FreqMeasure
+</a>
+
+</h5>
+<h5>
+Multipliers (257)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiply_4_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+31x31-bit Multiply 							: 256
+</span>
+<span name="Multiply_4_1" id="Multiply_4_1">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:138')" name="code2model" class="code2model">
+Product
+</a>
+
+</li>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:141')" name="code2model" class="code2model">
+Product1
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiply_4_2')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+33x24-bit Multiply 							: 1
+</span>
+<span name="Multiply_4_2" id="Multiply_4_2">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:57')" name="code2model" class="code2model">
+Product2
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><h5>
+Adders/Subtractors (128)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Adder_4_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+63x63-bit Adder 							: 128
+</span>
+<span name="Adder_4_1" id="Adder_4_1">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:139')" name="code2model" class="code2model">
+Add
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><h5>
+Registers (515)
+</h5>
+<span style="font-family:monospace">
+31-bit Register 							: 256
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_4_2')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+62-bit Register 							: 256
+</span>
+<span name="Register_4_2" id="Register_4_2">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('gm_radarSim4:30')" name="code2model" class="code2model">
+PipelineRegister
+</a>
+
+</li>
+<li>
+<a href="matlab:coder.internal.code2model('gm_radarSim4:33')" name="code2model" class="code2model">
+PipelineRegister1
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_4_3')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+32-bit Register 							: 1
+</span>
+<span name="Register_4_3" id="Register_4_3">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('gm_radarSim4:37')" name="code2model" class="code2model">
+HwModeRegister4
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_4_4')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+24-bit Register 							: 1
+</span>
+<span name="Register_4_4" id="Register_4_4">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('gm_radarSim4:38')" name="code2model" class="code2model">
+HwModeRegister5
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_4_5')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+56-bit Register 							: 1
+</span>
+<span name="Register_4_5" id="Register_4_5">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('gm_radarSim4:36')" name="code2model" class="code2model">
+PipelineRegister2
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><h5>
+Multiplexers (257)
+</h5>
+<span style="font-family:monospace">
+63-bit 2-to-1 Multiplexer 							: 127
+</span>
+<br /><span style="font-family:monospace">
+32-bit 2-to-1 Multiplexer 							: 127
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiplexer_4_3')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+57-bit 3-to-1 Multiplexer 							: 1
+</span>
+<span name="Multiplexer_4_3" id="Multiplexer_4_3">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:58')" name="code2model" class="code2model">
+Divide
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiplexer_4_4')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+57-bit 2-to-1 Multiplexer 							: 1
+</span>
+<span name="Multiplexer_4_4" id="Multiplexer_4_4">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:58')" name="code2model" class="code2model">
+Divide
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiplexer_4_5')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+56-bit 3-to-1 Multiplexer 							: 1
+</span>
+<span name="Multiplexer_4_5" id="Multiplexer_4_5">
+<ul>
+<li>
+<a href="matlab:coder.internal.code2model('radarSim4:58')" name="code2model" class="code2model">
+Divide
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><p><hr /></p><h5>
+Report for Subsystem:    <a href="matlab:coder.internal.code2model('radarSim4:234')" name="code2model" class="code2model">
+Compare
+To Zero
+</a>
+
+</h5>
+<h5>
+Multiplexers (1)
+</h5>
+<span style="font-family:monospace">
+1-bit 2-to-1 Multiplexer 							: 1
+</span>
+<br /><p><hr /></p>
+</body>
+
+</html>

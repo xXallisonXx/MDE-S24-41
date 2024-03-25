@@ -51,7 +51,7 @@ c = get(groot,'defaultAxesColorOrder');
 
 % Compute error
 err_vec = ref_vec - act_vec;
-uSq_err = mean(abs(err_vec))
+uSq_err = mean(abs(err_vec));
 max_err = max(abs(err_vec));
 max_ref = max(abs(ref_vec));
 fprintf('\nMaximum error for %s out of %d values\n',textstring,length(actual));
