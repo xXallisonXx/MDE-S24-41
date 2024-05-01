@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Feb 23 11:38:53 2024
+# Process ID: 50416
+# Current directory: c:/Users/tommy/usp_rf_data_converter_0_ex
+# Command line: vivado.exe -notrace -source c:/Users/tommy/rf_anal/rf_anal.gen/sources_1/ip/usp_rf_data_converter_0/usp_rf_data_converter_0_ex.tcl
+# Log file: c:/Users/tommy/usp_rf_data_converter_0_ex/vivado.log
+# Journal file: c:/Users/tommy/usp_rf_data_converter_0_ex\vivado.jou
+# Running On: LAPTOP-L57NIJPM, OS: Windows, CPU Frequency: 2994 MHz, CPU Physical cores: 16, Host memory: 16556 MB
+#-----------------------------------------------------------
+start_gui
+source c:/Users/tommy/rf_anal/rf_anal.gen/sources_1/ip/usp_rf_data_converter_0/usp_rf_data_converter_0_ex.tcl -notrace
+update_compile_order -fileset sources_1
+startgroup
+set_property -dict [list CONFIG.ADC0_Enable {1} CONFIG.ADC0_PLL_Enable {false} CONFIG.ADC0_Refclk_Freq {2000.000} CONFIG.ADC0_Fabric_Freq {250.000} CONFIG.ADC_Slice00_Enable {true} CONFIG.ADC_Decimation_Mode00 {1} CONFIG.ADC_Mixer_Type00 {1} CONFIG.ADC_Coarse_Mixer_Freq00 {3} CONFIG.ADC_RESERVED_1_00 {0} CONFIG.ADC_Slice01_Enable {true} CONFIG.ADC_Decimation_Mode01 {1} CONFIG.ADC_Mixer_Type01 {1} CONFIG.ADC_Coarse_Mixer_Freq01 {3} CONFIG.ADC_RESERVED_1_01 {0} CONFIG.ADC_OBS01 {0} CONFIG.ADC_RESERVED_1_02 {0} CONFIG.ADC_OBS02 {0} CONFIG.ADC_RESERVED_1_03 {0} CONFIG.ADC_OBS03 {0} CONFIG.DAC0_PLL_Enable {true} CONFIG.DAC0_Refclk_Freq {400.000} CONFIG.DAC0_Clock_Dist {1}] [get_bd_cells usp_rf_data_converter_0]
+endgroup
+undo
+startgroup
+endgroup
+startgroup
+endgroup
+undo
+startgroup
+set_property -dict [list CONFIG.Axiclk_Freq {57.5} CONFIG.ADC0_Enable {1} CONFIG.ADC0_PLL_Enable {true} CONFIG.ADC0_Refclk_Freq {250.000} CONFIG.ADC0_Fabric_Freq {500.000} CONFIG.ADC0_Band {1} CONFIG.ADC0_Clock_Dist {2} CONFIG.ADC_Slice00_Enable {true} CONFIG.ADC_Data_Type00 {1} CONFIG.ADC_Decimation_Mode00 {1} CONFIG.ADC_Mixer_Type00 {1} CONFIG.ADC_Mixer_Mode00 {0} CONFIG.ADC_Coarse_Mixer_Freq00 {0} CONFIG.ADC_RESERVED_1_00 {0} CONFIG.ADC_Slice01_Enable {false} CONFIG.ADC_Data_Type01 {1} CONFIG.ADC_Decimation_Mode01 {1} CONFIG.ADC_Mixer_Type01 {1} CONFIG.ADC_Mixer_Mode01 {0} CONFIG.ADC_Coarse_Mixer_Freq01 {0} CONFIG.ADC_RESERVED_1_01 {0} CONFIG.ADC_OBS01 {0} CONFIG.ADC_RESERVED_1_02 {0} CONFIG.ADC_OBS02 {0} CONFIG.ADC_RESERVED_1_03 {0} CONFIG.ADC_OBS03 {0} CONFIG.ADC_RESERVED_1_10 {0} CONFIG.ADC_RESERVED_1_11 {0} CONFIG.ADC_RESERVED_1_12 {0} CONFIG.ADC_RESERVED_1_13 {0} CONFIG.ADC_RESERVED_1_20 {0} CONFIG.ADC_RESERVED_1_22 {0} CONFIG.ADC_RESERVED_1_30 {0} CONFIG.ADC_RESERVED_1_31 {0} CONFIG.ADC_RESERVED_1_32 {0} CONFIG.ADC_RESERVED_1_33 {0} CONFIG.mADC_RESERVED_1_00 {0} CONFIG.mADC_RESERVED_1_01 {0} CONFIG.mADC_RESERVED_1_02 {0} CONFIG.mADC_RESERVED_1_03 {0} CONFIG.DAC0_PLL_Enable {true} CONFIG.DAC0_Refclk_Freq {400.000} CONFIG.DAC0_Band {1} CONFIG.DAC0_Clock_Dist {1} CONFIG.DAC_RESERVED_1_00 {0} CONFIG.DAC_Slice01_Enable {true} CONFIG.DAC_Interpolation_Mode01 {2} CONFIG.DAC_Mixer_Type01 {2} CONFIG.DAC_Mixer_Mode01 {1} CONFIG.DAC_RESERVED_1_01 {0} CONFIG.DAC_RESERVED_1_02 {0} CONFIG.DAC_Mixer_Type03 {3} CONFIG.DAC_RESERVED_1_03 {0} CONFIG.RF_Analyzer {1}] [get_bd_cells usp_rf_data_converter_0]
+endgroup
+save_bd_design

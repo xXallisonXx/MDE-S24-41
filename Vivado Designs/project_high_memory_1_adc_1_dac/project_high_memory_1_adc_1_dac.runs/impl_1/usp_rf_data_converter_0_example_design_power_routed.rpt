@@ -1,0 +1,195 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date             : Thu Mar 21 19:39:38 2024
+| Host             : LAPTOP-L57NIJPM running 64-bit major release  (build 9200)
+| Command          : report_power -file usp_rf_data_converter_0_example_design_power_routed.rpt -pb usp_rf_data_converter_0_example_design_power_summary_routed.pb -rpx usp_rf_data_converter_0_example_design_power_routed.rpx
+| Design           : usp_rf_data_converter_0_example_design
+| Device           : xczu67dr-fsve1156-2-i
+| Design State     : routed
+| Grade            : industrial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 2.327        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 1.602        |
+| Device Static (W)        | 0.725        |
+| Effective TJA (C/W)      | 0.9          |
+| Max Ambient (C)          | 97.9         |
+| Junction Temperature (C) | 27.1         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.033 |       19 |       --- |             --- |
+| CLB Logic                |     0.010 |    30147 |       --- |             --- |
+|   LUT as Logic           |     0.008 |    10978 |    223680 |            4.91 |
+|   LUT as Distributed RAM |    <0.001 |      248 |    109920 |            0.23 |
+|   LUT as Shift Register  |    <0.001 |      217 |    109920 |            0.20 |
+|   Register               |    <0.001 |    13725 |    447360 |            3.07 |
+|   CARRY8                 |    <0.001 |       85 |     27960 |            0.30 |
+|   BUFG                   |    <0.001 |        2 |        40 |            5.00 |
+|   Others                 |    <0.001 |     1432 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |      507 |    223680 |            0.23 |
+| Signals                  |     0.024 |    34062 |       --- |             --- |
+| Block RAM                |     0.064 |    386.5 |       648 |           59.65 |
+| RFAMS                    |     1.277 |        5 |       --- |             --- |
+|   RFDAC                  |     0.772 |        2 |         2 |          100.00 |
+|   RFADC                  |     0.505 |        3 |         3 |          100.00 |
+| MMCM                     |     0.194 |        0 |       --- |             --- |
+| Static Power             |     0.725 |          |           |                 |
+| Total                    |     2.327 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source     | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint     |       0.850 |     0.321 |       0.154 |      0.167 |       NA    | Unspecified | NA         |
+| Vccint_io  |       0.850 |     0.044 |       0.000 |      0.044 |       NA    | Unspecified | NA         |
+| Vccbram    |       0.850 |     0.005 |       0.000 |      0.005 |       NA    | Unspecified | NA         |
+| Vccaux     |       1.800 |     0.278 |       0.108 |      0.170 |       NA    | Unspecified | NA         |
+| Vccaux_io  |       1.800 |     0.036 |       0.000 |      0.036 |       NA    | Unspecified | NA         |
+| Vcco33     |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25     |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18     |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15     |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135    |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12     |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco10     |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc     |       1.800 |     0.008 |       0.000 |      0.008 |       NA    | Unspecified | NA         |
+| VCCINT_AMS |       0.850 |     0.527 |       0.512 |      0.015 |       NA    | Unspecified | NA         |
+| DACAVCC    |       0.925 |     0.231 |       0.227 |      0.005 |       NA    | Unspecified | NA         |
+| DACAVCCAUX |       1.800 |     0.061 |       0.060 |      0.001 |       NA    | Unspecified | NA         |
+| DACAVTT    |       2.500 |     0.049 |       0.044 |      0.005 |       NA    | Unspecified | NA         |
+| ADCAVCC    |       1.010 |     0.256 |       0.168 |      0.088 |       NA    | Unspecified | NA         |
+| ADCAVCCAUX |       1.800 |     0.156 |       0.136 |      0.020 |       NA    | Unspecified | NA         |
+| MGTYAVcc   |       0.900 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTYAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTYVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
++------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                               |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 0.9                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 1.5                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Clock                                                                                               | Domain                                                                                                                      | Constraint (ns) |
++-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+-----------------+
+| RFADC1_CLK                                                                                          | usp_rf_data_converter_0_ex_i/ex_design/usp_rf_data_converter_0/inst/rfdc_ex_usp_rf_data_converter_0_0_rf_wrapper_i/clk_adc1 |            32.0 |
+| RFDAC0_CLK                                                                                          | usp_rf_data_converter_0_ex_i/ex_design/usp_rf_data_converter_0/inst/rfdc_ex_usp_rf_data_converter_0_0_rf_wrapper_i/clk_dac0 |            20.0 |
+| clk_out1_rfdc_ex_clk_wiz_adc0_0                                                                     | usp_rf_data_converter_0_ex_i/clocking_block/clk_wiz_adc0/inst/CLK_CORE_DRP_I/clk_inst/clk_out1_rfdc_ex_clk_wiz_adc0_0       |            32.0 |
+| clk_out1_rfdc_ex_clk_wiz_dac0_0                                                                     | usp_rf_data_converter_0_ex_i/clocking_block/clk_wiz_dac0/inst/CLK_CORE_DRP_I/clk_inst/clk_out1_rfdc_ex_clk_wiz_dac0_0       |            20.0 |
+| clkfbout_rfdc_ex_clk_wiz_adc0_0                                                                     | usp_rf_data_converter_0_ex_i/clocking_block/clk_wiz_adc0/inst/CLK_CORE_DRP_I/clk_inst/clkfbout_rfdc_ex_clk_wiz_adc0_0       |            32.0 |
+| clkfbout_rfdc_ex_clk_wiz_dac0_0                                                                     | usp_rf_data_converter_0_ex_i/clocking_block/clk_wiz_dac0/inst/CLK_CORE_DRP_I/clk_inst/clkfbout_rfdc_ex_clk_wiz_dac0_0       |            20.0 |
+| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/DRCK                                                          |            50.0 |
+| usp_rf_data_converter_0_adc1_clk                                                                    | adc1_clk_p                                                                                                                  |             4.0 |
+| usp_rf_data_converter_0_axi_aclk                                                                    | s_axi_aclk                                                                                                                  |            17.4 |
+| usp_rf_data_converter_0_ex_i/mdm_1/U0/MDM_Core_I1/Use_Dbg_Reg_Access.DbgReg_DRCK_i_reg/Q            | usp_rf_data_converter_0_ex_i/mdm_1/U0/MDM_Core_I1/dbgreg_drck                                                               |            34.8 |
+| usp_rf_data_converter_0_ex_i/mdm_1/U0/MDM_Core_I1/Use_Dbg_Reg_Access.DbgReg_UPDATE_i_reg/Q          | usp_rf_data_converter_0_ex_i/mdm_1/U0/MDM_Core_I1/dbgreg_update                                                             |            69.6 |
+| usp_rf_data_converter_0_ex_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK                          | usp_rf_data_converter_0_ex_i/mdm_1/U0/Use_E2.BSCAN_I/DRCK                                                                   |            33.3 |
+| usp_rf_data_converter_0_ex_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE                        | usp_rf_data_converter_0_ex_i/mdm_1/U0/Use_E2.BSCAN_I/UPDATE                                                                 |            66.7 |
++-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++----------------------------------------+-----------+
+| Name                                   | Power (W) |
++----------------------------------------+-----------+
+| usp_rf_data_converter_0_example_design |     1.602 |
+|   dbg_hub                              |     0.002 |
+|     inst                               |     0.002 |
+|       BSCANID.u_xsdbm_id               |     0.002 |
+|   usp_rf_data_converter_0_ex_i         |     1.600 |
+|     clocking_block                     |     0.202 |
+|       clk_wiz_adc0                     |     0.101 |
+|       clk_wiz_dac0                     |     0.101 |
+|     ex_design                          |     1.351 |
+|       adc_sink_i                       |     0.025 |
+|       dac_source_i                     |     0.027 |
+|       smartconnect_0                   |     0.005 |
+|       usp_rf_data_converter_0          |     1.293 |
+|     jtag_axi_0                         |     0.006 |
+|       inst                             |     0.006 |
+|     mdm_1                              |     0.002 |
+|       U0                               |     0.002 |
+|     microblaze_0                       |     0.014 |
+|       U0                               |     0.014 |
+|     microblaze_0_local_memory          |     0.026 |
+|       lmb_bram                         |     0.026 |
++----------------------------------------+-----------+
+
+

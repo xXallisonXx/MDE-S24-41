@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xczu67dr-fsve1156-2-i" LaunchTime="1711063060" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/usp_rf_data_converter_0_example_design.dcp">
+  <File Type="PA-TCL" Name="usp_rf_data_converter_0_example_design.tcl"/>
+  <File Type="REPORTS-TCL" Name="usp_rf_data_converter_0_example_design_reports.tcl"/>
+  <File Type="RDS-RDS" Name="usp_rf_data_converter_0_example_design.vds"/>
+  <File Type="RDS-UTIL" Name="usp_rf_data_converter_0_example_design_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="usp_rf_data_converter_0_example_design_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="usp_rf_data_converter_0_example_design.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../../../../RfSoc/usp_rf_data_converter_0_ex/imports/exdes_xpm_mem_ds.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_exdes_rfadc_ctrl_rfa.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../RfSoc/usp_rf_data_converter_0_ex/imports/exdes_rfadc_data_bram_capture.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../RfSoc/usp_rf_data_converter_0_ex/imports/exdes_xpm_mem_dg.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_exdes_rfdac_ctrl_rfa.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../RfSoc/usp_rf_data_converter_0_ex/imports/exdes_rfdac_data_bram_stim.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/rfdc_ex/rfdc_ex.bd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.srcs/sources_1/bd/rfdc_ex/rfdc_ex.bd"/>
+        <Attr Name="ImportTime" Val="1711675597"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_example_design.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../RfSoc/usp_rf_data_converter_0_ex/imports/data/startup.elf">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="ScopedToRef" Val="rfdc_ex"/>
+        <Attr Name="ScopedToCell" Val="microblaze_0"/>
+        <Attr Name="IsVisible" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="usp_rf_data_converter_0_example_design"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../../../../../RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_example_design.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/usp_rf_data_converter_0_example_design.dcp">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.srcs/utils_1/imports/synth_1/usp_rf_data_converter_0_example_design.dcp"/>
+        <Attr Name="ImportTime" Val="1711062994"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="rfdc_ex_clk_wiz_adc0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="rfdc_ex_adc_sink_i_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="rfdc_ex_jtag_axi_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="rfdc_ex_smartconnect_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="rfdc_ex_rst_s_axi_aclk_57M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="rfdc_ex_usp_rf_data_converter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="rfdc_ex_dac_source_i_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="rfdc_ex_ilmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="rfdc_ex_microblaze_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="rfdc_ex_mdm_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="rfdc_ex_dlmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="rfdc_ex_dlmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="rfdc_ex_clk_wiz_dac0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="rfdc_ex_ilmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="rfdc_ex_lmb_bram_0"/>
+</GenRun>

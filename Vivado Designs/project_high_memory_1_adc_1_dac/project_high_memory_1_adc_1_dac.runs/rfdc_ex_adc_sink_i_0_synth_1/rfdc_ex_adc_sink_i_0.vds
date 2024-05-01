@@ -1,0 +1,558 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Mar 21 19:17:45 2024
+# Process ID: 18464
+# Current directory: c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/rfdc_ex_adc_sink_i_0_synth_1
+# Command line: vivado.exe -log rfdc_ex_adc_sink_i_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rfdc_ex_adc_sink_i_0.tcl
+# Log file: c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/rfdc_ex_adc_sink_i_0_synth_1/rfdc_ex_adc_sink_i_0.vds
+# Journal file: c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/rfdc_ex_adc_sink_i_0_synth_1\vivado.jou
+# Running On: LAPTOP-L57NIJPM, OS: Windows, CPU Frequency: 2994 MHz, CPU Physical cores: 16, Host memory: 16556 MB
+#-----------------------------------------------------------
+Sourcing tcl script 'C:/Users/tommy/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
+110 Beta devices matching pattern found, 34 enabled.
+enable_beta_device: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 441.246 ; gain = 162.309
+source rfdc_ex_adc_sink_i_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.cache/ip 
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: rfdc_ex_adc_sink_i_0
+Command: synth_design -top rfdc_ex_adc_sink_i_0 -part xczu67dr-fsve1156-2-i -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu67dr'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu67dr'
+INFO: [Device 21-403] Loading part xczu67dr-fsve1156-2-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 36316
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1990.699 ; gain = 362.176
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'rfdc_ex_adc_sink_i_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_adc_sink_i_0/synth/rfdc_ex_adc_sink_i_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'exdes_rfadc_data_bram_capture' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/exdes_rfadc_data_bram_capture.v:51]
+	Parameter mem_size bound to: 4194304 - type: integer 
+	Parameter axi_addr_top bound to: 31 - type: integer 
+	Parameter use_div2_clk_0 bound to: 0 - type: integer 
+	Parameter use_div2_clk_1 bound to: 0 - type: integer 
+	Parameter use_div2_clk_2 bound to: 0 - type: integer 
+	Parameter use_div2_clk_3 bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [C:/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+	Parameter DEST_SYNC_FF bound to: 5 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (0#1) [C:/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6157] synthesizing module 'exdes_xpm_mem_ds' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/exdes_xpm_mem_ds.sv:51]
+	Parameter wordWidth bound to: 128 - type: integer 
+	Parameter memWordWidth bound to: 16 - type: integer 
+	Parameter addraWidth bound to: 14 - type: integer 
+	Parameter addrWidth bound to: 17 - type: integer 
+	Parameter use_div2_clk bound to: 0 - type: integer 
+	Parameter mem_size bound to: 4194304 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'exdes_xpm_mem_ds_int' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/exdes_xpm_mem_ds.sv:173]
+	Parameter wordWidth bound to: 128 - type: integer 
+	Parameter memWordWidth bound to: 16 - type: integer 
+	Parameter addraWidth bound to: 14 - type: integer 
+	Parameter addrWidth bound to: 17 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'SRLC32E' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp_diablo.v:135053]
+INFO: [Synth 8-6155] done synthesizing module 'SRLC32E' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp_diablo.v:135053]
+INFO: [Synth 8-6157] synthesizing module 'xpm_mem_ds_wrap2' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/exdes_xpm_mem_ds.sv:482]
+	Parameter wordWidth bound to: 256 - type: integer 
+	Parameter wordsInMemory bound to: 131072 - type: integer 
+	Parameter addraWidth bound to: 14 - type: integer 
+	Parameter addrWidth bound to: 17 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_mem_ds_sdpram_wrap' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/exdes_xpm_mem_ds.sv:546]
+	Parameter wordWidth bound to: 256 - type: integer 
+	Parameter wordsInMemory bound to: 131072 - type: integer 
+	Parameter addraWidth bound to: 14 - type: integer 
+	Parameter addrWidth bound to: 17 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram' [C:/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8548]
+	Parameter MEMORY_SIZE bound to: 4194304 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter CLOCKING_MODE bound to: independent_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 256 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 256 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 14 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 17 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 2 - type: integer 
+	Parameter WRITE_MODE_B bound to: no_change - type: string 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [C:/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's.   [C:/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:508]
+WARNING: [Synth 8-6896] loop limit (65536) exceeded inside initial block, initial block items will be ignored [C:/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1187]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [C:/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram' (0#1) [C:/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8548]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_mem_ds_sdpram_wrap' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/exdes_xpm_mem_ds.sv:546]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_mem_ds_wrap2' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/exdes_xpm_mem_ds.sv:482]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_xpm_mem_ds_int' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/exdes_xpm_mem_ds.sv:173]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_xpm_mem_ds' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/exdes_xpm_mem_ds.sv:51]
+INFO: [Synth 8-6157] synthesizing module 'rfadc_exdes_ctrl_rfa' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_exdes_rfadc_ctrl_rfa.sv:343]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 20 - type: integer 
+	Parameter C_NUM_MEMORY_BLOCK bound to: 2 - type: integer 
+	Parameter C_MEMORY_ADDR_WIDTH bound to: 17 - type: integer 
+	Parameter C_MEM_SIZE bound to: 4194304 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'adc_exdes_cfg_rfa' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_exdes_rfadc_ctrl_rfa.sv:60]
+	Parameter C_MEMORY_ADDR_WIDTH bound to: 17 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_exdes_rfadc_ctrl_rfa.sv:122]
+INFO: [Synth 8-6155] done synthesizing module 'adc_exdes_cfg_rfa' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_exdes_rfadc_ctrl_rfa.sv:60]
+INFO: [Synth 8-6157] synthesizing module 'rfadc_exdes_ctrl_axi_rfa' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_exdes_rfadc_ctrl_rfa.sv:525]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 20 - type: integer 
+	Parameter C_NUM_MEMORY_BLOCK bound to: 2 - type: integer 
+	Parameter SELECT_MEM_WIDTH bound to: 1 - type: integer 
+	Parameter C_MEMORY_ADDR_WIDTH bound to: 17 - type: integer 
+	Parameter C_MEMORY_DATA_WITH bound to: 32 - type: integer 
+	Parameter C_S_TIMEOUT_WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rfadc_exdes_ctrl_axi_rfa' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_exdes_rfadc_ctrl_rfa.sv:525]
+INFO: [Synth 8-6155] done synthesizing module 'rfadc_exdes_ctrl_rfa' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_exdes_rfadc_ctrl_rfa.sv:343]
+WARNING: [Synth 8-689] width (32) of port connection 's_axi_awaddr' does not match port width (20) of module 'rfadc_exdes_ctrl_rfa' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/exdes_rfadc_data_bram_capture.v:316]
+WARNING: [Synth 8-689] width (32) of port connection 's_axi_araddr' does not match port width (20) of module 'rfadc_exdes_ctrl_rfa' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/exdes_rfadc_data_bram_capture.v:327]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_rfadc_data_bram_capture' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/exdes_rfadc_data_bram_capture.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'rfdc_ex_adc_sink_i_0' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_adc_sink_i_0/synth/rfdc_ex_adc_sink_i_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element gen_wr_a.gen_word_wide.wr_sync.addralsb_reg was removed.  [C:/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1438]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [C:/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3069]
+Info : Asymmetric Ram write pattern identified
+WARNING: [Synth 8-6014] Unused sequential element axi_awaddr_ff_reg was removed.  [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_exdes_rfadc_ctrl_rfa.sv:663]
+WARNING: [Synth 8-7129] Port s_axi_awprot[2] in module rfadc_exdes_ctrl_axi_rfa is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awprot[1] in module rfadc_exdes_ctrl_axi_rfa is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awprot[0] in module rfadc_exdes_ctrl_axi_rfa is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[3] in module rfadc_exdes_ctrl_axi_rfa is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[2] in module rfadc_exdes_ctrl_axi_rfa is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[1] in module rfadc_exdes_ctrl_axi_rfa is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[0] in module rfadc_exdes_ctrl_axi_rfa is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[2] in module rfadc_exdes_ctrl_axi_rfa is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[1] in module rfadc_exdes_ctrl_axi_rfa is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[0] in module rfadc_exdes_ctrl_axi_rfa is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sleep in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rsta in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[31] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[30] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[29] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[28] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[27] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[26] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[25] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[24] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[23] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[22] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[21] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[20] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[19] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[18] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[17] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[16] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[15] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[14] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[13] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[12] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[11] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[10] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[9] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[8] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[7] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[6] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[5] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[4] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[3] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[2] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[1] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[0] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rsta in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port web in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[31] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[30] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[29] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[28] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[27] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[26] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[25] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[24] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[23] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[22] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[21] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[20] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[19] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[18] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[17] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[16] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[15] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[14] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[13] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[12] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[11] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[10] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[9] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[8] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[7] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[6] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[5] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[4] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[3] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[2] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[1] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[0] in module xpm_mem_ds_sdpram_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_single is either unconnected or has no load
+WARNING: [Synth 8-7129] Port enable in module exdes_xpm_mem_ds_int is either unconnected or has no load
+WARNING: [Synth 8-7129] Port endaddra[31] in module exdes_xpm_mem_ds_int is either unconnected or has no load
+WARNING: [Synth 8-7129] Port endaddra[30] in module exdes_xpm_mem_ds_int is either unconnected or has no load
+WARNING: [Synth 8-7129] Port endaddra[29] in module exdes_xpm_mem_ds_int is either unconnected or has no load
+WARNING: [Synth 8-7129] Port endaddra[28] in module exdes_xpm_mem_ds_int is either unconnected or has no load
+WARNING: [Synth 8-7129] Port endaddra[27] in module exdes_xpm_mem_ds_int is either unconnected or has no load
+WARNING: [Synth 8-7129] Port endaddra[26] in module exdes_xpm_mem_ds_int is either unconnected or has no load
+WARNING: [Synth 8-7129] Port endaddra[25] in module exdes_xpm_mem_ds_int is either unconnected or has no load
+WARNING: [Synth 8-7129] Port endaddra[24] in module exdes_xpm_mem_ds_int is either unconnected or has no load
+WARNING: [Synth 8-7129] Port endaddra[23] in module exdes_xpm_mem_ds_int is either unconnected or has no load
+WARNING: [Synth 8-7129] Port endaddra[22] in module exdes_xpm_mem_ds_int is either unconnected or has no load
+WARNING: [Synth 8-7129] Port endaddra[21] in module exdes_xpm_mem_ds_int is either unconnected or has no load
+WARNING: [Synth 8-7129] Port endaddra[20] in module exdes_xpm_mem_ds_int is either unconnected or has no load
+WARNING: [Synth 8-7129] Port endaddra[19] in module exdes_xpm_mem_ds_int is either unconnected or has no load
+WARNING: [Synth 8-7129] Port endaddra[18] in module exdes_xpm_mem_ds_int is either unconnected or has no load
+WARNING: [Synth 8-7129] Port endaddra[17] in module exdes_xpm_mem_ds_int is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 2193.195 ; gain = 564.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 2197.066 ; gain = 568.543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 2197.066 ; gain = 568.543
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.109 . Memory (MB): peak = 2197.066 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/rfdc_ex_adc_sink_i_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/rfdc_ex_adc_sink_i_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/rfdc_ex_adc_sink_i_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/rfdc_ex_adc_sink_i_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 4 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2281.703 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.096 . Memory (MB): peak = 2299.609 ; gain = 17.906
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 2299.609 ; gain = 671.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu67dr-fsve1156-2-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 2299.609 ; gain = 671.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst/ds_slice_10/exdes_xpm_mem_ds_i/data_cap_working_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\gen_sync_receive_sync10_div1.data_gen_enable_i . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\gen_tile_en_sync1_div1.data_gen_enable_i . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 2299.609 ; gain = 671.086
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 's10_working_reg' in module 'exdes_rfadc_data_bram_capture'
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_wide.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "xpm_memory_base:/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "xpm_memory_base:/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "xpm_memory_base:/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "xpm_memory_base:/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "xpm_memory_base:/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "xpm_memory_base:/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "xpm_memory_base:/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "xpm_memory_base:/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "xpm_memory_base:/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "xpm_memory_base:/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "xpm_memory_base:/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "xpm_memory_base:/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "xpm_memory_base:/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "xpm_memory_base:/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "xpm_memory_base:/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "xpm_memory_base:/gen_wr_a.gen_word_wide.mem_reg"
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+          wait_for_start |                               01 |                               01
+       wait_for_complete |                               10 |                               10
+        wait_for_disable |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 's10_working_reg' using encoding 'sequential' in module 'exdes_rfadc_data_bram_capture'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 2299.609 ; gain = 671.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   14 Bit       Adders := 1     
+	   2 Input   13 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	              512 Bit    Registers := 1     
+	              256 Bit    Registers := 1     
+	               32 Bit    Registers := 6     
+	               17 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
+	               14 Bit    Registers := 2     
+	               13 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	                9 Bit    Registers := 2     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 19    
++---RAMs : 
+	            4096K Bit	(131072 X 32 bit)          RAMs := 1     
++---Muxes : 
+	  24 Input  512 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 2     
+	   2 Input   20 Bit        Muxes := 1     
+	   2 Input   13 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 16    
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 26    
+	  22 Input    1 Bit        Muxes := 5     
+	   4 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1872 (col length:120)
+BRAMs: 1296 (col length: RAMB18 120 RAMB36 60)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_wide.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_wide.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_wide.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "\inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram /xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "\inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram /xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "\inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram /xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "\inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram /xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "\inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram /xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "\inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram /xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "\inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram /xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "\inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram /xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "\inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram /xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "\inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram /xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "\inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram /xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "\inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram /xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "\inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram /xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "\inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram /xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "\inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram /xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 4 for RAM "\inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram /xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg"
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_wide.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:24 . Memory (MB): peak = 2299.609 ; gain = 671.086
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_wide.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_wide.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++--------------------------------------------------------------------------------------------------------------------------+--------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+---------------------------------+
+|Module Name                                                                                                               | RTL Object                     | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights                 | 
++--------------------------------------------------------------------------------------------------------------------------+--------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+---------------------------------+
+|\inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram /xpm_memory_base_inst | gen_wr_a.gen_word_wide.mem_reg | 16 K x 256(NO_CHANGE)  | W |   | 128 K x 32(NO_CHANGE)  |   | R | Port A and B     | 0      | 128    | 8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8 | 
++--------------------------------------------------------------------------------------------------------------------------+--------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+---------------------------------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:32 ; elapsed = 00:01:43 . Memory (MB): peak = 2643.871 ; gain = 1015.348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_wide.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_wide.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:32 ; elapsed = 00:01:44 . Memory (MB): peak = 2646.473 ; gain = 1017.949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++--------------------------------------------------------------------------------------------------------------------------+--------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+---------------------------------+
+|Module Name                                                                                                               | RTL Object                     | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights                 | 
++--------------------------------------------------------------------------------------------------------------------------+--------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+---------------------------------+
+|\inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram /xpm_memory_base_inst | gen_wr_a.gen_word_wide.mem_reg | 16 K x 256(NO_CHANGE)  | W |   | 128 K x 32(NO_CHANGE)  |   | R | Port A and B     | 0      | 128    | 8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8 | 
++--------------------------------------------------------------------------------------------------------------------------+--------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+---------------------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram/xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg_bram_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram/xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg_bram_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram/xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg_bram_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram/xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg_bram_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram/xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg_bram_39 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram/xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg_bram_47 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram/xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg_bram_55 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram/xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg_bram_63 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram/xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg_bram_71 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram/xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg_bram_79 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram/xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg_bram_87 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram/xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg_bram_95 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram/xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg_bram_103 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram/xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg_bram_111 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram/xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg_bram_119 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ds_slice_10/exdes_xpm_mem_ds_i/xpm_mem_ds_wrap2_i/xpm_mem_dg_sdpram_wrap_i/Ixpm_memory_tdpram/xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg_bram_127 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:33 ; elapsed = 00:01:45 . Memory (MB): peak = 2665.770 ; gain = 1037.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:39 ; elapsed = 00:01:51 . Memory (MB): peak = 2679.418 ; gain = 1050.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:39 ; elapsed = 00:01:51 . Memory (MB): peak = 2679.418 ; gain = 1050.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:39 ; elapsed = 00:01:51 . Memory (MB): peak = 2679.418 ; gain = 1050.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:39 ; elapsed = 00:01:51 . Memory (MB): peak = 2679.418 ; gain = 1050.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:39 ; elapsed = 00:01:51 . Memory (MB): peak = 2679.418 ; gain = 1050.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:39 ; elapsed = 00:01:51 . Memory (MB): peak = 2679.418 ; gain = 1050.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY8   |     4|
+|2     |LUT1     |    18|
+|3     |LUT2     |    13|
+|4     |LUT3     |   104|
+|5     |LUT4     |    27|
+|6     |LUT5     |    72|
+|7     |LUT6     |   261|
+|8     |MUXF7    |     4|
+|9     |RAMB36E2 |   128|
+|12    |SRLC32E  |   256|
+|13    |FDRE     |  1205|
+|14    |FDSE     |     9|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:39 ; elapsed = 00:01:51 . Memory (MB): peak = 2679.418 ; gain = 1050.895
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 128 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:20 ; elapsed = 00:01:47 . Memory (MB): peak = 2679.418 ; gain = 948.352
+Synthesis Optimization Complete : Time (s): cpu = 00:01:39 ; elapsed = 00:01:51 . Memory (MB): peak = 2679.418 ; gain = 1050.895
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.127 . Memory (MB): peak = 2679.418 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2720.629 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: d7bd5575
+INFO: [Common 17-83] Releasing license: Synthesis
+111 Infos, 108 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:50 ; elapsed = 00:02:07 . Memory (MB): peak = 2720.629 ; gain = 2202.504
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2720.629 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/rfdc_ex_adc_sink_i_0_synth_1/rfdc_ex_adc_sink_i_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP rfdc_ex_adc_sink_i_0, cache-ID = 35f5bcbc5f55d41e
+INFO: [Coretcl 2-1174] Renamed 13 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2720.629 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/rfdc_ex_adc_sink_i_0_synth_1/rfdc_ex_adc_sink_i_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file rfdc_ex_adc_sink_i_0_utilization_synth.rpt -pb rfdc_ex_adc_sink_i_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 21 19:20:11 2024...

@@ -1,0 +1,9 @@
+#!/bin/bash -f
+ncvlog -64bit -logfile ncvlog.log -update -SV \
+-define "XIL_HSDAC_REAL_PORT=" \
+-define "XIL_HSDAC_HSDAC_RNM_PORT=" \
+-define "XIL_HSDAC_HSADC_RNM_PORT=" \
+-define "XIL_HSADC_REAL_PORT=" \
+-define "XIL_HSADC_HSADC_RNM_PORT=" \
+-define "XIL_HSADC_HSDAC_RNM_PORT=" \
+-work xil_defaultlib

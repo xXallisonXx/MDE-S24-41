@@ -1,0 +1,411 @@
+
+*** Running vivado
+    with args -log usp_rf_data_converter_0_example_design.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source usp_rf_data_converter_0_example_design.tcl
+
+
+ECHO is off.
+ECHO is off.
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+Sourcing tcl script 'C:/Users/tommy/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
+110 Beta devices matching pattern found, 34 enabled.
+enable_beta_device: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 442.098 ; gain = 160.004
+source usp_rf_data_converter_0_example_design.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
+INFO: [Project 1-4468] Skipped adding '..\..\..\..\imports\data\startup.elf' file in synth run script
+INFO: [Project 1-4468] Skipped adding '..\..\..\..\imports\data\startup.elf' file in synth run script
+add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 539.012 ; gain = 70.746
+Command: read_checkpoint -auto_incremental -incremental c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.srcs/utils_1/imports/synth_1/usp_rf_data_converter_0_example_design.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.srcs/utils_1/imports/synth_1/usp_rf_data_converter_0_example_design.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top usp_rf_data_converter_0_example_design -part xczu67dr-fsve1156-2-i
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu67dr'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu67dr'
+INFO: [Device 21-403] Loading part xczu67dr-fsve1156-2-i
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1560
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2057.320 ; gain = 364.641
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'usp_rf_data_converter_0_example_design' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_example_design.v:60]
+INFO: [Synth 8-6157] synthesizing module 'rfdc_ex' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:1334]
+INFO: [Synth 8-6157] synthesizing module 'clocking_block_imp_1Q9S2IC' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:13]
+INFO: [Synth 8-6157] synthesizing module 'rfdc_ex_clk_wiz_adc0_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_clk_wiz_adc0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rfdc_ex_clk_wiz_adc0_0' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_clk_wiz_adc0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rfdc_ex_clk_wiz_dac0_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_clk_wiz_dac0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rfdc_ex_clk_wiz_dac0_0' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_clk_wiz_dac0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clocking_block_imp_1Q9S2IC' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ex_design_imp_1MGVD6J' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:232]
+INFO: [Synth 8-6157] synthesizing module 'rfdc_ex_adc_sink_i_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_adc_sink_i_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rfdc_ex_adc_sink_i_0' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_adc_sink_i_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rfdc_ex_dac_source_i_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_dac_source_i_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rfdc_ex_dac_source_i_0' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_dac_source_i_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rfdc_ex_smartconnect_0_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_smartconnect_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rfdc_ex_smartconnect_0_0' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_smartconnect_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'rfdc_ex_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:895]
+WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'rfdc_ex_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:895]
+WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'rfdc_ex_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:895]
+WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'rfdc_ex_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:895]
+WARNING: [Synth 8-7071] port 'M02_AXI_awprot' of module 'rfdc_ex_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:895]
+WARNING: [Synth 8-7071] port 'M02_AXI_arprot' of module 'rfdc_ex_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:895]
+WARNING: [Synth 8-7071] port 'M03_AXI_awprot' of module 'rfdc_ex_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:895]
+WARNING: [Synth 8-7071] port 'M03_AXI_arprot' of module 'rfdc_ex_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:895]
+WARNING: [Synth 8-7071] port 'M04_AXI_awprot' of module 'rfdc_ex_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:895]
+WARNING: [Synth 8-7071] port 'M04_AXI_arprot' of module 'rfdc_ex_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:895]
+WARNING: [Synth 8-7071] port 'M05_AXI_awprot' of module 'rfdc_ex_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:895]
+WARNING: [Synth 8-7071] port 'M05_AXI_arprot' of module 'rfdc_ex_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:895]
+WARNING: [Synth 8-7023] instance 'smartconnect_0' of module 'rfdc_ex_smartconnect_0_0' has 172 connections declared, but only 160 given [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:895]
+INFO: [Synth 8-6157] synthesizing module 'rfdc_ex_usp_rf_data_converter_0_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_usp_rf_data_converter_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rfdc_ex_usp_rf_data_converter_0_0' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_usp_rf_data_converter_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'irq' of module 'rfdc_ex_usp_rf_data_converter_0_0' is unconnected for instance 'usp_rf_data_converter_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:1056]
+WARNING: [Synth 8-7023] instance 'usp_rf_data_converter_0' of module 'rfdc_ex_usp_rf_data_converter_0_0' has 42 connections declared, but only 41 given [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:1056]
+INFO: [Synth 8-6155] done synthesizing module 'ex_design_imp_1MGVD6J' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:232]
+INFO: [Synth 8-6157] synthesizing module 'rfdc_ex_jtag_axi_0_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_jtag_axi_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rfdc_ex_jtag_axi_0_0' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_jtag_axi_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rfdc_ex_mdm_1_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_mdm_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rfdc_ex_mdm_1_0' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_mdm_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'Interrupt' of module 'rfdc_ex_mdm_1_0' is unconnected for instance 'mdm_1' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:1802]
+WARNING: [Synth 8-7023] instance 'mdm_1' of module 'rfdc_ex_mdm_1_0' has 30 connections declared, but only 29 given [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:1802]
+INFO: [Synth 8-6157] synthesizing module 'rfdc_ex_microblaze_0_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_microblaze_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rfdc_ex_microblaze_0_0' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_microblaze_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'Interrupt_Ack' of module 'rfdc_ex_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:1834]
+WARNING: [Synth 8-7023] instance 'microblaze_0' of module 'rfdc_ex_microblaze_0_0' has 52 connections declared, but only 51 given [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:1834]
+INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_1FP2N28' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:1100]
+INFO: [Synth 8-6157] synthesizing module 'rfdc_ex_dlmb_bram_if_cntlr_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rfdc_ex_dlmb_bram_if_cntlr_0' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rfdc_ex_dlmb_v10_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_dlmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rfdc_ex_dlmb_v10_0' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_dlmb_v10_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'rfdc_ex_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:1246]
+WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'rfdc_ex_dlmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:1246]
+INFO: [Synth 8-6157] synthesizing module 'rfdc_ex_ilmb_bram_if_cntlr_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rfdc_ex_ilmb_bram_if_cntlr_0' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rfdc_ex_ilmb_v10_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_ilmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rfdc_ex_ilmb_v10_0' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_ilmb_v10_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'rfdc_ex_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:1292]
+WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'rfdc_ex_ilmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:1292]
+INFO: [Synth 8-6157] synthesizing module 'rfdc_ex_lmb_bram_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_lmb_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rfdc_ex_lmb_bram_0' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_lmb_bram_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'rfdc_ex_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:1317]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'rfdc_ex_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:1317]
+WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'rfdc_ex_lmb_bram_0' has 16 connections declared, but only 14 given [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:1317]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_1FP2N28' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:1100]
+INFO: [Synth 8-6157] synthesizing module 'rfdc_ex_rst_s_axi_aclk_57M_0' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_rst_s_axi_aclk_57M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rfdc_ex_rst_s_axi_aclk_57M_0' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/.Xil/Vivado-16008-LAPTOP-L57NIJPM/realtime/rfdc_ex_rst_s_axi_aclk_57M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'rfdc_ex_rst_s_axi_aclk_57M_0' is unconnected for instance 'rst_s_axi_aclk_57M' [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:1908]
+WARNING: [Synth 8-7023] instance 'rst_s_axi_aclk_57M' of module 'rfdc_ex_rst_s_axi_aclk_57M_0' has 10 connections declared, but only 9 given [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:1908]
+INFO: [Synth 8-6155] done synthesizing module 'rfdc_ex' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/synth/rfdc_ex.v:1334]
+INFO: [Synth 8-6157] synthesizing module 'STARTUPE3' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp_diablo.v:135107]
+INFO: [Synth 8-6155] done synthesizing module 'STARTUPE3' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp_diablo.v:135107]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp_diablo.v:1951]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp_diablo.v:1951]
+INFO: [Synth 8-6155] done synthesizing module 'usp_rf_data_converter_0_example_design' (0#1) [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_example_design.v:60]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2152.434 ; gain = 459.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2170.344 ; gain = 477.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2170.344 ; gain = 477.664
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 2182.375 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_smartconnect_0_0/rfdc_ex_smartconnect_0_0/rfdc_ex_smartconnect_0_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/ex_design/smartconnect_0'
+Finished Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_smartconnect_0_0/rfdc_ex_smartconnect_0_0/rfdc_ex_smartconnect_0_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/ex_design/smartconnect_0'
+Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_adc_sink_i_0/rfdc_ex_adc_sink_i_0/rfdc_ex_adc_sink_i_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/ex_design/adc_sink_i'
+Finished Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_adc_sink_i_0/rfdc_ex_adc_sink_i_0/rfdc_ex_adc_sink_i_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/ex_design/adc_sink_i'
+Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_dac_source_i_0/rfdc_ex_dac_source_i_0/rfdc_ex_dac_source_i_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/ex_design/dac_source_i'
+Finished Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_dac_source_i_0/rfdc_ex_dac_source_i_0/rfdc_ex_dac_source_i_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/ex_design/dac_source_i'
+Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/ex_design/usp_rf_data_converter_0'
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2221.266 ; gain = 17.914
+Finished Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/ex_design/usp_rf_data_converter_0'
+Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_jtag_axi_0_0/rfdc_ex_jtag_axi_0_0/rfdc_ex_jtag_axi_0_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/jtag_axi_0'
+Finished Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_jtag_axi_0_0/rfdc_ex_jtag_axi_0_0/rfdc_ex_jtag_axi_0_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/jtag_axi_0'
+Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_microblaze_0_0/rfdc_ex_microblaze_0_0/rfdc_ex_microblaze_0_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/microblaze_0'
+Finished Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_microblaze_0_0/rfdc_ex_microblaze_0_0/rfdc_ex_microblaze_0_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/microblaze_0'
+Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_mdm_1_0/rfdc_ex_mdm_1_0/rfdc_ex_mdm_1_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/mdm_1'
+Finished Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_mdm_1_0/rfdc_ex_mdm_1_0/rfdc_ex_mdm_1_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/mdm_1'
+Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_dlmb_bram_if_cntlr_0/rfdc_ex_dlmb_bram_if_cntlr_0/rfdc_ex_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_dlmb_bram_if_cntlr_0/rfdc_ex_dlmb_bram_if_cntlr_0/rfdc_ex_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_dlmb_v10_0/rfdc_ex_dlmb_v10_0/rfdc_ex_dlmb_v10_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/microblaze_0_local_memory/dlmb_v10'
+Finished Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_dlmb_v10_0/rfdc_ex_dlmb_v10_0/rfdc_ex_dlmb_v10_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/microblaze_0_local_memory/dlmb_v10'
+Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_ilmb_bram_if_cntlr_0/rfdc_ex_ilmb_bram_if_cntlr_0/rfdc_ex_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_ilmb_bram_if_cntlr_0/rfdc_ex_ilmb_bram_if_cntlr_0/rfdc_ex_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_ilmb_v10_0/rfdc_ex_ilmb_v10_0/rfdc_ex_dlmb_v10_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/microblaze_0_local_memory/ilmb_v10'
+Finished Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_ilmb_v10_0/rfdc_ex_ilmb_v10_0/rfdc_ex_dlmb_v10_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/microblaze_0_local_memory/ilmb_v10'
+Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_lmb_bram_0/rfdc_ex_lmb_bram_0/rfdc_ex_lmb_bram_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/microblaze_0_local_memory/lmb_bram'
+Finished Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_lmb_bram_0/rfdc_ex_lmb_bram_0/rfdc_ex_lmb_bram_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/microblaze_0_local_memory/lmb_bram'
+Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_rst_s_axi_aclk_57M_0/rfdc_ex_rst_s_axi_aclk_57M_0/rfdc_ex_rst_s_axi_aclk_57M_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/rst_s_axi_aclk_57M'
+Finished Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_rst_s_axi_aclk_57M_0/rfdc_ex_rst_s_axi_aclk_57M_0/rfdc_ex_rst_s_axi_aclk_57M_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/rst_s_axi_aclk_57M'
+Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_clk_wiz_dac0_0/rfdc_ex_clk_wiz_dac0_0/rfdc_ex_clk_wiz_dac0_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/clocking_block/clk_wiz_dac0'
+Finished Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_clk_wiz_dac0_0/rfdc_ex_clk_wiz_dac0_0/rfdc_ex_clk_wiz_dac0_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/clocking_block/clk_wiz_dac0'
+Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_clk_wiz_adc0_0/rfdc_ex_clk_wiz_adc0_0/rfdc_ex_clk_wiz_adc0_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/clocking_block/clk_wiz_adc0'
+Finished Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_clk_wiz_adc0_0/rfdc_ex_clk_wiz_adc0_0/rfdc_ex_clk_wiz_adc0_0_in_context.xdc] for cell 'usp_rf_data_converter_0_ex_i/clocking_block/clk_wiz_adc0'
+Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_example_design.xdc]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name =~ *usp_rf_data_converter_0_ex_i/ex_design/usp_rf_data_converter_0/inst/IP2Bus_Data_reg*}'. [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_example_design.xdc:70]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME== D} -of [get_cells -hier -filter {name =~ *usp_rf_data_converter_0_ex_i/ex_design/usp_rf_data_converter_0/inst/IP2Bus_Data_reg*}]'. [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_example_design.xdc:70]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_example_design.xdc:71]
+WARNING: [Vivado 12-180] No cells matched '.*rf(?:da|ad)c_exdes_ctrl_i/(?:da|ad)c_exdes_cfg_i/.+num_samples_reg.*'. [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_example_design.xdc:78]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name=~*dg_slice_00*addrb_reg[*]}'. [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_example_design.xdc:79]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*dg_slice_00*addrbend_reg'. [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_example_design.xdc:85]
+WARNING: [Vivado 12-180] No cells matched '.*rf(?:da|ad)c_exdes_ctrl_i/(?:da|ad)c_exdes_cfg_i/.+num_samples_reg.*'. [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_example_design.xdc:91]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name=~*ds_slice_10*addra_reg[*]}'. [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_example_design.xdc:92]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*ds_slice_10*working_i_reg'. [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_example_design.xdc:98]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*ds_slice_10*cap_complete_reg'. [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_example_design.xdc:104]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*ds_slice_10*wea_r_reg'. [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_example_design.xdc:110]
+Finished Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_example_design.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_example_design.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/usp_rf_data_converter_0_example_design_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/imports/usp_rf_data_converter_0_example_design.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/usp_rf_data_converter_0_example_design_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/usp_rf_data_converter_0_example_design_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2221.266 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+
+The system cannot find the path specified.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2221.266 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'usp_rf_data_converter_0_ex_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '17.391', this can lead to different synthesis results.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 2221.266 ; gain = 528.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu67dr-fsve1156-2-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 2221.266 ; gain = 528.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for adc1_clk_n. (constraint file  c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for adc1_clk_n. (constraint file  c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for adc1_clk_p. (constraint file  c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for adc1_clk_p. (constraint file  c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for dac0_clk_n. (constraint file  c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for dac0_clk_n. (constraint file  c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for dac0_clk_p. (constraint file  c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for dac0_clk_p. (constraint file  c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for sysref_in_n. (constraint file  c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sysref_in_n. (constraint file  c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for sysref_in_p. (constraint file  c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sysref_in_p. (constraint file  c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for vin10_n. (constraint file  c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vin10_n. (constraint file  c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for vin10_p. (constraint file  c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0_in_context.xdc, line 17).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vin10_p. (constraint file  c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0_in_context.xdc, line 18).
+Applied set_property IO_BUFFER_TYPE = NONE for vout00_n. (constraint file  c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0_in_context.xdc, line 19).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout00_n. (constraint file  c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0_in_context.xdc, line 20).
+Applied set_property IO_BUFFER_TYPE = NONE for vout00_p. (constraint file  c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0_in_context.xdc, line 21).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout00_p. (constraint file  c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.gen/sources_1/bd/rfdc_ex/ip/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0/rfdc_ex_usp_rf_data_converter_0_0_in_context.xdc, line 22).
+Applied set_property KEEP_HIERARCHY = SOFT for usp_rf_data_converter_0_ex_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usp_rf_data_converter_0_ex_i/ex_design/smartconnect_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usp_rf_data_converter_0_ex_i/ex_design/adc_sink_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usp_rf_data_converter_0_ex_i/ex_design/dac_source_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usp_rf_data_converter_0_ex_i/ex_design/usp_rf_data_converter_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usp_rf_data_converter_0_ex_i/jtag_axi_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usp_rf_data_converter_0_ex_i/microblaze_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usp_rf_data_converter_0_ex_i/mdm_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usp_rf_data_converter_0_ex_i/microblaze_0_local_memory/dlmb_bram_if_cntlr. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usp_rf_data_converter_0_ex_i/microblaze_0_local_memory/dlmb_v10. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usp_rf_data_converter_0_ex_i/microblaze_0_local_memory/ilmb_bram_if_cntlr. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usp_rf_data_converter_0_ex_i/microblaze_0_local_memory/ilmb_v10. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usp_rf_data_converter_0_ex_i/microblaze_0_local_memory/lmb_bram. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usp_rf_data_converter_0_ex_i/rst_s_axi_aclk_57M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usp_rf_data_converter_0_ex_i/clocking_block/clk_wiz_dac0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usp_rf_data_converter_0_ex_i/clocking_block/clk_wiz_adc0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2221.266 ; gain = 528.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2221.266 ; gain = 528.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1872 (col length:120)
+BRAMs: 1296 (col length: RAMB18 120 RAMB36 60)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 2221.266 ; gain = 528.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 2656.344 ; gain = 963.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 2656.566 ; gain = 963.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 2667.289 ; gain = 974.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 2682.035 ; gain = 989.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 2682.035 ; gain = 989.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 2682.035 ; gain = 989.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 2682.035 ; gain = 989.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 2682.035 ; gain = 989.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 2682.035 ; gain = 989.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------------------------+----------+
+|      |BlackBox name                     |Instances |
++------+----------------------------------+----------+
+|1     |rfdc_ex_jtag_axi_0_0              |         1|
+|2     |rfdc_ex_mdm_1_0                   |         1|
+|3     |rfdc_ex_microblaze_0_0            |         1|
+|4     |rfdc_ex_rst_s_axi_aclk_57M_0      |         1|
+|5     |rfdc_ex_clk_wiz_adc0_0            |         1|
+|6     |rfdc_ex_clk_wiz_dac0_0            |         1|
+|7     |rfdc_ex_adc_sink_i_0              |         1|
+|8     |rfdc_ex_dac_source_i_0            |         1|
+|9     |rfdc_ex_smartconnect_0_0          |         1|
+|10    |rfdc_ex_usp_rf_data_converter_0_0 |         1|
+|11    |rfdc_ex_dlmb_bram_if_cntlr_0      |         1|
+|12    |rfdc_ex_dlmb_v10_0                |         1|
+|13    |rfdc_ex_ilmb_bram_if_cntlr_0      |         1|
+|14    |rfdc_ex_ilmb_v10_0                |         1|
+|15    |rfdc_ex_lmb_bram_0                |         1|
++------+----------------------------------+----------+
+
+Report Cell Usage: 
++------+--------------------------------+------+
+|      |Cell                            |Count |
++------+--------------------------------+------+
+|1     |rfdc_ex_adc_sink_i              |     1|
+|2     |rfdc_ex_clk_wiz_adc0            |     1|
+|3     |rfdc_ex_clk_wiz_dac0            |     1|
+|4     |rfdc_ex_dac_source_i            |     1|
+|5     |rfdc_ex_dlmb_bram_if_cntlr      |     1|
+|6     |rfdc_ex_dlmb_v10                |     1|
+|7     |rfdc_ex_ilmb_bram_if_cntlr      |     1|
+|8     |rfdc_ex_ilmb_v10                |     1|
+|9     |rfdc_ex_jtag_axi_0              |     1|
+|10    |rfdc_ex_lmb_bram                |     1|
+|11    |rfdc_ex_mdm_1                   |     1|
+|12    |rfdc_ex_microblaze_0            |     1|
+|13    |rfdc_ex_rst_s_axi_aclk_57M      |     1|
+|14    |rfdc_ex_smartconnect_0          |     1|
+|15    |rfdc_ex_usp_rf_data_converter_0 |     1|
+|16    |BUFG                            |     1|
+|17    |STARTUPE3                       |     1|
++------+--------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 2682.035 ; gain = 989.355
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:42 . Memory (MB): peak = 2682.035 ; gain = 938.434
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 2682.035 ; gain = 989.355
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 2682.035 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2739.359 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+
+The system cannot find the path specified.
+Synth Design complete | Checksum: 2aee1770
+INFO: [Common 17-83] Releasing license: Synthesis
+73 Infos, 42 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:01:04 . Memory (MB): peak = 2739.359 ; gain = 2200.348
+INFO: [Common 17-1381] The checkpoint 'c:/Users/tommy/RfSoc/usp_rf_data_converter_0_ex/usp_rf_data_converter_0_ex.runs/synth_1/usp_rf_data_converter_0_example_design.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file usp_rf_data_converter_0_example_design_utilization_synth.rpt -pb usp_rf_data_converter_0_example_design_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 21 19:23:21 2024...
